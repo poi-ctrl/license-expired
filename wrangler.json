@@ -1,0 +1,11 @@
+{
+  "name": "license-expired",
+  "main": "worker-expired.js",
+  "compatibility_date": "2026-08-13",
+  "kv_namespaces": [
+    {
+      "binding": "LICENSE",
+      "id": "481dbc7196bd422d89d90d211cc259a5"
+    }
+  ]
+}
