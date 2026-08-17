@@ -1,53 +1,123 @@
 const LICENSES = {
   "BUYER-001": {
-    password: "kosong 1",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 1",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-002": {
-    password: "kosong 2",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 2",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-003": {
-    password: "kosong 3",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 3",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-004": {
-    password: "kosong 4",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 4",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-005": {
-    password: "kosong 5",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 5",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-006": {
-    password: "kosong 6",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 6",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-007": {
-    password: "kosong 7",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 7",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-008": {
-    password: "kosong 8",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 8",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-009": {
-    password: "kosong 9",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 9",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   },
   "BUYER-010": {
-    password: "kosong 10",
-    status: "active",
-    expired: "2026-09-30"
+    "password": "kosong 10",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-011": {
+    "password": "kosong 11",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-012": {
+    "password": "kosong 12",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-013": {
+    "password": "kosong 13",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-014": {
+    "password": "kosong 14",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-015": {
+    "password": "kosong 15",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-016": {
+    "password": "kosong 16",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-017": {
+    "password": "kosong 17",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-018": {
+    "password": "kosong 18",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-019": {
+    "password": "kosong 19",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
+  },
+  "BUYER-020": {
+    "password": "kosong 20",
+    "status": "active",
+    "expired": "2026-09-30",
+    "device_id": null
   }
 };
 
@@ -69,10 +139,6 @@ export default {
 
   async fetch(request, env) {
 
-    // ==========================================
-    // OPTIONS
-    // ==========================================
-
     if (request.method === "OPTIONS") {
 
       return new Response(null, {
@@ -87,10 +153,6 @@ export default {
     }
 
 
-    // ==========================================
-    // ONLY POST
-    // ==========================================
-
     if (request.method !== "POST") {
 
       return json({
@@ -102,10 +164,6 @@ export default {
 
 
     try {
-
-      // ========================================
-      // BACA REQUEST
-      // ========================================
 
       const body = await request.json();
 
@@ -120,10 +178,6 @@ export default {
           ? String(body.device_id)
           : "";
 
-
-      // ========================================
-      // VALIDASI INPUT
-      // ========================================
 
       if (!license || !password) {
 
@@ -145,10 +199,6 @@ export default {
       }
 
 
-      // ========================================
-      // CARI LICENSE
-      // ========================================
-
       const licenseData = LICENSES[license];
 
 
@@ -162,10 +212,6 @@ export default {
       }
 
 
-      // ========================================
-      // CEK PASSWORD
-      // ========================================
-
       if (licenseData.password !== password) {
 
         return json({
@@ -175,10 +221,6 @@ export default {
 
       }
 
-
-      // ========================================
-      // CEK STATUS
-      // ========================================
 
       if (licenseData.status !== "active") {
 
@@ -190,16 +232,13 @@ export default {
       }
 
 
-      // ========================================
-      // CEK EXPIRED
-      // ========================================
-
       if (licenseData.expired !== "lifetime") {
 
         const expired =
           new Date(
             licenseData.expired + "T23:59:59Z"
           );
+
 
         if (Number.isNaN(expired.getTime())) {
 
@@ -224,10 +263,6 @@ export default {
       }
 
 
-      // ========================================
-      // CEK KV BINDING
-      // ========================================
-
       if (!env.LICENSE) {
 
         return json({
@@ -238,17 +273,9 @@ export default {
       }
 
 
-      // ========================================
-      // CEK DEVICE YANG SUDAH TERDAFTAR
-      // ========================================
-
       const savedDevice =
         await env.LICENSE.get(license);
 
-
-      // ========================================
-      // LICENSE BELUM TERIKAT
-      // ========================================
 
       if (!savedDevice) {
 
@@ -256,6 +283,7 @@ export default {
           license,
           device_id
         );
+
 
         return json({
           ok: true,
@@ -267,10 +295,6 @@ export default {
 
       }
 
-
-      // ========================================
-      // DEVICE SAMA
-      // ========================================
 
       if (savedDevice === device_id) {
 
@@ -284,10 +308,6 @@ export default {
 
       }
 
-
-      // ========================================
-      // DEVICE BERBEDA
-      // ========================================
 
       return json({
         ok: false,
@@ -308,3 +328,4 @@ export default {
   }
 
 };
+
