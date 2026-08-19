@@ -5,8 +5,8 @@ const LICENSES = {
     "expired": "2026-09-30",
     "device_id": null
   },
-  "BUYER-002": {
-    "password": "kosong 2",
+  "ADIKKK": {
+    "password": "naomi01",
     "status": "active",
     "expired": "2026-09-30",
     "device_id": null
@@ -17,8 +17,8 @@ const LICENSES = {
     "expired": "2026-09-10",
     "device_id": null
   },
-  "BUYER-004": {
-    "password": "kosong 4",
+  "ALDI": {
+    "password": "aldi01",
     "status": "active",
     "expired": "2026-09-30",
     "device_id": null
