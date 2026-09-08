@@ -2,19 +2,19 @@ const LICENSES = {
   "ARNI": {
     "password": "arni01",
     "status": "active",
-    "expired": "2026-09-10",
+    "expired": "2026-09-30",
     "device_id": null
   },
   "ADIK": {
     "password": "adik01",
     "status": "active",
-    "expired": "2026-09-10",
+    "expired": "2026-09-30",
     "device_id": null
   },
   "KHOLIS": {
     "password": "kholis01",
     "status": "active",
-    "expired": "2026-09-10",
+    "expired": "2026-09-30",
     "device_id": null
   },
   "ALDI": {
@@ -26,7 +26,7 @@ const LICENSES = {
   "BYTEN": {
     "password": "byten01",
     "status": "active",
-    "expired": "2026-09-10",
+    "expired": "2026-09-30",
     "device_id": null
   },
   "TOKYO": {
@@ -50,11 +50,11 @@ const LICENSES = {
   "VANILA": {
     "password": "vanila07",
     "status": "active",
-    "expired": "2026-09-10",
+    "expired": "2026-09-30",
     "device_id": null
   },
-  "BUYER-010": {
-    "password": "kosong 10",
+  "VIONA": {
+    "password": "viona01",
     "status": "active",
     "expired": "2026-09-30",
     "device_id": null
