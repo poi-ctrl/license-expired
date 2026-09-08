@@ -1,6 +1,6 @@
 const LICENSES = {
-  "BUYER-001": {
-    "password": "kosong 1",
+  "ARNI": {
+    "password": "arni01",
     "status": "active",
     "expired": "2026-09-10",
     "device_id": null
