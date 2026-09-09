@@ -38,7 +38,7 @@ const LICENSES = {
   "MOONY": {
     "password": "sava",
     "status": "active",
-    "expired": "2026-09-10",
+    "expired": "2026-09-30",
     "device_id": null
   },
   "ZILZ": {
