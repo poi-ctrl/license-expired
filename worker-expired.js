@@ -14,7 +14,7 @@ const LICENSES = {
   "KHOLIS": {
     "password": "kholis01",
     "status": "active",
-    "expired": "2026-09-30",
+    "expired": "2026-10-20",
     "device_id": null
   },
   "ALDI": {
