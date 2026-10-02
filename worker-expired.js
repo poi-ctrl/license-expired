@@ -71,8 +71,8 @@ const LICENSES = {
     "expired": "2026-09-30",
     "device_id": null
   },
-  "WESTERN1": {
-    "password": "western1",
+  "123R": {
+    "password": "123r",
     "status": "active",
     "expired": "2026-09-30",
     "device_id": null
