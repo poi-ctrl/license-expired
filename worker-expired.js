@@ -32,7 +32,7 @@ const LICENSES = {
   "TOKYO": {
     "password": "rendy660715",
     "status": "active",
-    "expired": "2026-09-30",
+    "expired": "2026-10-20",
     "device_id": null
   },
   "MOONY": {
