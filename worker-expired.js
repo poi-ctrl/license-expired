@@ -83,8 +83,8 @@ const LICENSES = {
     "expired": "2026-11-09",
     "device_id": null
   },
-  "BUYER-015": {
-    "password": "kosong 15",
+  "123AB": {
+    "password": "123ab",
     "status": "active",
     "expired": "2026-09-30",
     "device_id": null
