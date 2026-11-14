@@ -95,8 +95,8 @@ const LICENSES = {
     "expired": "2026-11-26",
     "device_id": null
   },
-  "V123": {
-    "password": "v123",
+  "sabbihismarobbikala'la": {
+    "password": "Al-a'la",
     "status": "active",
     "expired": "2026-12-04",
     "device_id": null
